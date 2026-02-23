@@ -7,10 +7,18 @@ const transporter = nodemailer.createTransport({
     auth: {
         user: process.env.EMAIL_USER, // Your Gmail address
         pass: process.env.EMAIL_PASS  // Your Gmail App Password
-    }
+    },
+    connectionTimeout: 5000, // Fail fast if HF blocks SMTP
+    greetingTimeout: 5000,
+    socketTimeout: 5000
 });
 
 exports.sendEmailOTP = async (email, otp) => {
+    // ALWAYS log the OTP to the server console as a fallback if emails are blocked!
+    console.log(`\n========================================`);
+    console.log(`🔑 2FA LOGIN OTP CODE: ${otp}`);
+    console.log(`📧 Destination: ${email}`);
+    console.log(`========================================\n`);
     const mailOptions = {
         from: `"VoteGuard Security" <${process.env.EMAIL_USER}>`,
         to: email,
