@@ -19,6 +19,9 @@ RUN npx prisma generate
 # In Hugging Face, /data is usually used for persistent storage
 RUN mkdir -p /app/data
 
+# Compile smart contracts to generate the required artifacts
+RUN npx hardhat compile
+
 # Hugging Face Spaces expose port 7860
 ENV PORT 7860
 EXPOSE 7860
