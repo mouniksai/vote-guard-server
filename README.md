@@ -1,3 +1,12 @@
+---
+title: VoteGuard Backend
+emoji: ⚙️
+colorFrom: green
+colorTo: emerald
+sdk: docker
+pinned: false
+---
+
 # Vote Guard Server
 
 ![Node.js](https://img.shields.io/badge/Node.js-v18-green?style=flat&logo=node.js)
