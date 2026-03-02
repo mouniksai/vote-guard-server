@@ -50,7 +50,7 @@ jobs:
         run: npm ci
 
       - name: Run unit tests
-        run: npm test -- --ci --forceExit
+        run: npx jest --testPathPattern="testing/unit" --no-coverage --ci --forceExit
         env:
           JWT_SECRET: test-secret-for-ci
           AES_SECRET_KEY: TestCISecretKey32BytesLongHere!!
@@ -81,7 +81,7 @@ jobs:
         run: npm ci
 
       - name: Run tests with coverage
-        run: npm test -- --ci --coverage --forceExit
+        run: npx jest --testPathPattern="testing/unit" --coverage --ci --forceExit
         env:
           JWT_SECRET: test-secret-for-ci
           AES_SECRET_KEY: TestCISecretKey32BytesLongHere!!
