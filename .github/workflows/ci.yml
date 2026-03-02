@@ -25,6 +25,9 @@ jobs:
 
       - name: Validate Prisma schema
         run: npx prisma validate
+        env:
+          DATABASE_URL: postgresql://user:pass@localhost:5432/testdb
+          DIRECT_URL: postgresql://user:pass@localhost:5432/testdb
 
       - name: Check for syntax errors
         run: node --check server.js
