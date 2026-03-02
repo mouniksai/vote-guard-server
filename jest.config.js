@@ -8,7 +8,8 @@ module.exports = {
         '!**/node_modules/**'
     ],
     testMatch: [
-        '**/__tests__/**/*.test.js'
+        '**/__tests__/**/*.test.js',
+        '**/testing/**/*.test.js'
     ],
     setupFilesAfterEnv: ['<rootDir>/__tests__/setup.js'],
     coverageThreshold: {
