@@ -18,7 +18,7 @@ pinned: false
 
 The backend API powering VoteGuard — handles authentication, election management, secure vote casting, blockchain integration, and government registry verification.
 
-> 📚 **[Full API Documentation →](https://mouniksai.github.io/voteguard-docs/)**
+>  **[Full API Documentation →](https://sanjjiiev.github.io/voteguard-docs/)**
 
 ---
 
