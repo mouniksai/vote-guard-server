@@ -20,7 +20,8 @@ model GovtRegistry {
   gender       String?
   email        String   @unique
   mobile       String   @unique
-  photoUrl     String?  @map("photo_url")
+  photoUrl                String?  @map("photo_url")
+  fingerprintCredentialId String?  @map("fingerprint_credential_id")
   isRegistered Boolean  @default(false) @map("is_registered")
 
   User User?
